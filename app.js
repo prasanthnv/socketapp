@@ -1,7 +1,11 @@
 const http = require('http').createServer();
 
 const io = require('socket.io')(http, {
-  cors: {origin: '*'}
+    cors: {
+        origin: `https://socketdemo007.herokuapp.com/`, // I copied the origin in the error message and pasted here
+        methods: ["GET", "POST"],
+        credentials: true
+      }
 });
 
 
@@ -14,5 +18,5 @@ io.on('connection', (socket)=>{
   })
 
 })
-
+http.
 http.listen(8080, ()=> console.log('Listening on port 8080'))
