@@ -2,7 +2,7 @@ const http = require('http').createServer();
 
 const io = require('socket.io')(http, {
     cors: {
-        origin: `https://socketdemo007.herokuapp.com/`, // I copied the origin in the error message and pasted here
+        origin: `http://socketdemo007.herokuapp.com`, // I copied the origin in the error message and pasted here
         methods: ["GET", "POST"]      }
 });
 
